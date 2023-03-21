@@ -96,7 +96,7 @@ const Home = () => {
       {/* end hero section */}
 
       {/* start flying section */}
-      <section className='flying-section px-[70px] py-10 bg-white shadow-xl'>
+      <section className='flying-section px-[70px] py-10 bg-white shadow'>
         <h2 className='text-[20px] font-semibold'>Where are you flying? </h2>
         <form action="">
           <div className='lg:flex items-center gap-6'>
@@ -136,7 +136,7 @@ const Home = () => {
           </div>
 
           <div className='lg:flex items-center gap-2 lg:mt-12 mt-5 '>
-            <input type="text" placeholder="+ Add Promo Code" className="input w-full rounded focus:outline-none input-bordered" />
+            <input type="text" placeholder="+ Add Promo Code" className="input w-full h-12 relative rounded focus:outline-none input-bordered" />
 
             <button type='submit' className='flex w-full lg:mt-0 mt-5 items-center justify-center rounded text-white gap-2 border lg:max-w-[144px] h-[48px] bg-[#3282AD]'>
               <img src={AirIcon} alt="" />
@@ -152,7 +152,21 @@ const Home = () => {
 
       {/* start package section   */}
 
-        
+      <section className='package-section px-[70px]'>
+          <div className='title pt-[88px] text-center'>
+            <h2 className='text-2xl font-bold pb-4 text-[##3A3A3A]'>Best Packages For You</h2>
+            <p className='pb-16 text-[#5A5A5A]'>This is a unique experience on ship, sea and land, exploring different coral islands of Lakshadweep.</p>
+          </div>
+
+          <div className='lg:grid lg:grid-cols-5 mb:grid-cols-3 grid-cols-2 pb-[88px]'>
+            <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold h-[78px] mb-2'>Maldives</div>
+            <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>Samudram</div>
+            <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>Cordelia</div>
+            <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>Agatti</div>
+            <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>More</div>
+          </div>
+
+      </section>
 
 
 
