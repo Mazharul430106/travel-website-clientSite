@@ -30,7 +30,7 @@ const Navbar = () => {
         <li className='text-[16px]'><Link className='lg:bg-inherit' to='/aboutUs'>About Us</Link></li>
         <li className='text-[16px]'><Link className='lg:bg-inherit'>Gol</Link></li>
         <li className='text-[16px]'><Link className='lg:bg-inherit'>Support</Link></li>
-        <li className='lg:ml-28 ml-0 text-[16px]'><Link className='lg:bg-inherit' to='/login'>Login</Link></li>
+        <li className='lg:ml-28 ml-0 text-[16px]'><Link className='lg:bg-inherit text-[#3282AD]' to='/login'>Login</Link></li>
         <li className='text-[16px]'><Link className='signUpLast  px-0 lg:w-[123px] lg:h-[54px] lg:bg-[#056499] lg:text-white lg:flex lg:justify-center pl-4 lg:pl-0' to='/signup'>Sign Up</Link></li>
 
     </React.Fragment>
@@ -38,7 +38,7 @@ const Navbar = () => {
     return (
 
         <div className="navbar lg:px-[70px] absolute z-10 w-full max-w-[1366px] pt-10 ">
-            <div className="">
+            <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
