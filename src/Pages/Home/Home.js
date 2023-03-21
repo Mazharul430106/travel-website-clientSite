@@ -8,13 +8,15 @@ import imageBg from '../../assets/bg.png';
 import Ractangle9 from '../../assets/Rectangle 9.png';
 import ractangle9 from '../../assets/rectangle-9.png'
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { RiArrowUpDownFill } from 'react-icons/ri';
 import './Home.css';
 import Frame from '../../assets/Frame 11.png';
+import AirIcon from '../../assets/airIcon.png';
 
 const Home = () => {
   return (
     <div>
-
+      {/* start hero section */}
       <section className='hero-section px-[70px] relative pt-[197px]' style={{
         background: `url(${heroRactangle})`,
         backgroundRepeat: 'no-repeat',
@@ -70,11 +72,10 @@ const Home = () => {
 
           </div>
 
-
         </div>
 
         <div className='flex items-center lg:gap-[246px] gap-24  pt-16 pb-[136px]'>
-          <button className='border border-[#3282AD] rounded px-8 py-4 text-[#3282AD]'>Discover Now</button>
+          <button className='border border-[#3282AD] rounded px-8 py-4 text-[#3282AD] hover:bg-[#3282AD] hover:text-white'>Discover Now</button>
           <span><img className='rotate-[-45deg] text-[#42A7C3]' src={aroplane} alt="" /></span>
         </div>
 
@@ -91,9 +92,72 @@ const Home = () => {
 
         </div>
 
-
       </section>
-  
+      {/* end hero section */}
+
+      {/* start flying section */}
+      <section className='flying-section px-[70px] py-10 bg-white shadow-xl'>
+        <h2 className='text-[20px] font-semibold'>Where are you flying? </h2>
+        <form action="">
+          <div className='lg:flex items-center gap-6'>
+            <div className="form-control w-[340px]">
+              <label className="label p-0">
+                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10 " >From-To</span>
+              </label>
+              <div className='relative'>
+                <input type="text" placeholder="Type here" className="input rounded input-bordered w-full focus:outline-none" />
+                <RiArrowUpDownFill className='absolute top-[38%] cursor-pointer rotate-[90deg] right-3'></RiArrowUpDownFill>
+              </div>
+            </div>
+            <div className="form-control lg:w-[140px] w-full">
+              <label className="label p-0">
+                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Trip</span>
+              </label>
+              <select className="select select-bordered w-full text-normal focus:outline-none">
+                <option selected>Retrun</option>
+                <option>Han Solo</option>
+                <option>Greedo</option>
+              </select>
+            </div>
+            <div className="form-control w-[340px]">
+              <label className="label p-0">
+                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Depart- Return</span>
+              </label>
+              <input type="text" placeholder="Type here"
+                className=" rounded input input-bordered w-full focus:outline-none" />
+            </div>
+            <div className="form-control w-[340px]">
+              <label className="label p-0">
+                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Passenger - Class</span>
+              </label>
+              <input type="text" placeholder="Type here"
+                className=" rounded input input-bordered w-full focus:outline-none" />
+            </div>
+          </div>
+
+          <div className='lg:flex items-center gap-2 lg:mt-12 mt-5 '>
+            <input type="text" placeholder="+ Add Promo Code" className="input w-full rounded focus:outline-none input-bordered" />
+
+            <button type='submit' className='flex w-full lg:mt-0 mt-5 items-center justify-center rounded text-white gap-2 border lg:max-w-[144px] h-[48px] bg-[#3282AD]'>
+              <img src={AirIcon} alt="" />
+              <span className=''>Show Filghts</span>
+            </button>
+
+          </div>
+
+        </form>
+      </section>
+      {/* end flying section */}
+
+
+      {/* start package section   */}
+
+        
+
+
+
+
+      {/* end package section   */}
 
 
     </div>
