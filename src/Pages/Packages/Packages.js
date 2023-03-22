@@ -50,7 +50,7 @@ const Packages = () => {
                 <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>More</div>
             </div>
 
-            <div className=' w-full'>
+            <div className=''>
 
                 <Carousel responsive={responsive}
                     infinite={true}
@@ -58,7 +58,7 @@ const Packages = () => {
                     swipeable={false}
                     ssr={true}
                     autoPlaySpeed={2000}
-                    autoPlay={false}
+                    autoPlay={true}
                     transitionDuration={1000}
                     itemClass="carousel-item-padding-40-px">
                         {
@@ -66,7 +66,12 @@ const Packages = () => {
                         }
                 </Carousel>
 
+                <div className='text-center mt-28 mb-[88px]'>
+                    <button className='border border-[#3282AD] rounded w-[172px] h-[54px] text-[#3282AD] hover:bg-[#3282AD] hover:text-white font-normal'>Discover More</button>
+                </div>
+
             </div>
+            
 
         </section>
     );

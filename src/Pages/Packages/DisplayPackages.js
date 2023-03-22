@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaStar } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import StarIcon from '../../assets/Star.png';
 
 
 const DisplayPackages = ({ signlePackage }) => {
@@ -17,7 +18,7 @@ const DisplayPackages = ({ signlePackage }) => {
                         <h2 className="card-title">{place_title}</h2>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <FaStar className='text-[#3282AD]'></FaStar>
+                        <img src={StarIcon} alt="" />
                         <span className='font-bold'>{ratting}</span>
                     </div>
                 </div>

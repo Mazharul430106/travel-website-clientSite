@@ -151,17 +151,13 @@ const Home = () => {
       </section>
       {/* end flying section */}
 
-      {/* start package section   */}
-
       <Packages></Packages>
 
-      {/* end package section   */}
-      
       <IslandInfo></IslandInfo>
 
-
-
-
+      <section className='frame px-[70px]'>
+          
+      </section>  
 
     </div>
   );
