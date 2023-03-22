@@ -14,11 +14,13 @@ import Frame from '../../assets/Frame 11.png';
 import AirIcon from '../../assets/airIcon.png';
 import Packages from '../Packages/Packages';
 import IslandInfo from '../IslansInfo/IslandInfo';
+import WorldMap from '../../assets/world_map.png';
 
 const Home = () => {
   return (
     <div>
       {/* start hero section */}
+      
       <section className='hero-section px-[70px] relative pt-[197px]' style={{
         background: `url(${heroRactangle})`,
         backgroundRepeat: 'no-repeat',
@@ -151,13 +153,36 @@ const Home = () => {
       </section>
       {/* end flying section */}
 
+
       <Packages></Packages>
 
       <IslandInfo></IslandInfo>
 
-      <section className='frame px-[70px]'>
-          
-      </section>  
+
+      {/* start frame section */}
+      <section className='frame px-[70px] pb-[88px]'>
+
+        <div className='relative'>
+          <div className='lg:flex items-center w-full justify-between border  rounded px-8 bg-[#42A7C3] '>
+            <div className='text-white'>
+              <h2 className='w-full lg:max-w-[451px] font-bold text-[32px] pt-8 pb-8 leading-[50px] '>Let’s Ready to Explore The World With Us.</h2>
+              <p className='font-normal w-full lg:max-w-[513px] leading-7 pb-[52px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur ac quam in congue. </p>
+            </div>
+            <div className='flex justify-center'>
+              <button className='hover:text-[#3282AD] w-[183px] rounded bg-white h-[50px] font-semibold text-[20px] lg:mb-0 mb-10'>Contact Us</button>
+            </div>
+          </div>
+          <img src={WorldMap} className='lg:w-[453px] absolute lg:right-[206px]  lg:top-9 top-[30%]' alt="" />
+        </div>
+
+      </section>
+      {/* start frame section */}
+
+
+
+
+
+
 
     </div>
   );
