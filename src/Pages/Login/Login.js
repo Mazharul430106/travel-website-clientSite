@@ -7,7 +7,7 @@ const Login = () => {
             <div className="hero-content w-full max-w-[450px] flex-col lg:flex-row-reverse">
                 <div className="card rounded flex-shrink-0 w-full shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h2 className='text-3xl font-semibold text-center'>Login Now</h2>
+                        <h2 className='text-3xl font-semibold text-center'>Please Login</h2>
                         <form action="">
                             <div className="form-control">
                                 <label className="label">
