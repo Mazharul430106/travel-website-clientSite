@@ -15,12 +15,13 @@ import AirIcon from '../../assets/airIcon.png';
 import Packages from '../Packages/Packages';
 import IslandInfo from '../IslansInfo/IslandInfo';
 import WorldMap from '../../assets/world_map.png';
+import Clients from '../Clients/Clients';
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       {/* start hero section */}
-      
+
       <section className='hero-section px-[70px] relative pt-[197px]' style={{
         background: `url(${heroRactangle})`,
         backgroundRepeat: 'no-repeat',
@@ -140,13 +141,11 @@ const Home = () => {
           </div>
 
           <div className='lg:flex items-center gap-2 lg:mt-12 mt-5 '>
-            <input type="text" placeholder="+ Add Promo Code" className="input w-full h-12 relative rounded focus:outline-none input-bordered" />
-
+            <input type="text" placeholder="+ Add Promo Code" className="input w-full h-12 relative rounded focus:outline-none input-bordered border-dashed" />
             <button type='submit' className='flex w-full lg:mt-0 mt-5 items-center justify-center rounded text-white gap-2 border lg:max-w-[144px] h-[48px] bg-[#3282AD]'>
               <img src={AirIcon} alt="" />
               <span className=''>Show Filghts</span>
             </button>
-
           </div>
 
         </form>
@@ -178,7 +177,8 @@ const Home = () => {
       </section>
       {/* start frame section */}
 
-
+      
+      <Clients></Clients>
 
 
 

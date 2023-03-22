@@ -1,0 +1,17 @@
+.clientCarousel{
+    display: flex;
+    grid-gap: 15px !important;
+}
+.rec-dot_active{
+    background: #3282AD !important;
+}
+
+.cqQwrw,.ereApb{
+    width: 32px !important;
+    height: 32px !important;
+    border: 1px solid #3282AD !important;
+}
+
+.dkjKVr,.cvyJEp{
+    background: #3282AD !important;
+}
