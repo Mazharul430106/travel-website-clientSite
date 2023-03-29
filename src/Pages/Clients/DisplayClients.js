@@ -5,7 +5,7 @@ const DisplayClients = ({ singleClient }) => {
     console.log(singleClient)
     const { img, name, country, desc } = singleClient;
     return (
-        <div className="card card-compact w-full bg-base-100 border rounded py-[22px]">
+        <div className="card card-compact w-full bg-base-100 shadow-lg rounded py-[22px]">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <div className='text-center'>

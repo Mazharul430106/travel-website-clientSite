@@ -1,9 +1,7 @@
 import React, { useEffect, useState, } from 'react';
+import Slider from 'react-slick';
 import DisplayPackages from './DisplayPackages';
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import './Packages.css';
-
 
 const Packages = () => {
     const [allPackages, setPackages] = useState([]);
@@ -14,29 +12,45 @@ const Packages = () => {
             .then(data => setPackages(data))
     }, [])
 
-
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 1
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        autoplaySpeed: 2000,
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
-        <section className='package-section px-[70px]'>
+        <section className='package-section'>
             <div className='title pt-[88px] text-center'>
                 <h2 className='text-2xl font-bold pb-4 text-[##3A3A3A]'>Best Packages For You</h2>
                 <p className='pb-16 text-[#5A5A5A]'>This is a unique experience on ship, sea and land, exploring different coral islands of Lakshadweep.</p>
@@ -50,28 +64,17 @@ const Packages = () => {
                 <div className='border w-full flex justify-center items-center text-[#3282AD] cursor-pointer hover:bg-[#3282AD] hover:text-white font-bold lg:border-l-0 h-[78px] mb-2 '>More</div>
             </div>
 
-            <div className=''>
-
-                <Carousel responsive={responsive}
-                    infinite={true}
-                    showDots={true}
-                    swipeable={false}
-                    ssr={true}
-                    autoPlaySpeed={2000}
-                    autoPlay={true}
-                    transitionDuration={1000}
-                    itemClass="carousel-item-padding-40-px">
-                        {
-                            allPackages.map(signlePackage => <DisplayPackages key={signlePackage._id} signlePackage={signlePackage}></DisplayPackages>)
-                        }
-                </Carousel>
-
+            <div>
+                <Slider {...settings} className=''>
+                    {
+                        allPackages.map(signlePackage => <DisplayPackages key={signlePackage._id} signlePackage={signlePackage}></DisplayPackages>)
+                    }
+                </Slider>
                 <div className='text-center mt-28 mb-[88px]'>
                     <button className='border border-[#3282AD] rounded w-[172px] h-[54px] text-[#3282AD] hover:bg-[#3282AD] hover:text-white font-normal'>Discover More</button>
                 </div>
-
             </div>
-            
+
 
         </section>
     );

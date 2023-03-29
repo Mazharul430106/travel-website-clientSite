@@ -6,7 +6,7 @@ const DisplayIslands = ({ singleIsland }) => {
     const { img, ratting, place_title, desc } = singleIsland;
     return (
         <div className="card card-compact w-full rounded bg-base-100 shadow-xl">
-            <figure><img src={img} className='rounded-none' alt="Shoes" /></figure>
+            <figure><img src={img} className='rounded-none w-full' alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{place_title}</h2>
                 <p>{desc}</p>

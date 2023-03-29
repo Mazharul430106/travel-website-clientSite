@@ -15,7 +15,7 @@ const IslandInfo = () => {
 
 
     return (
-        <section className='px-[70px]'>
+        <section className=''>
             <div className='title text-center'>
                 <h1 className='font-bold text-[32px]'>Island Stays</h1>
                 <p className='font-normal w-full leading-[22px] pb-16 mx-auto'>One can choose from a variety of beautiful coral islands which offers different staying experiences from thatched huts to luxurious <br />

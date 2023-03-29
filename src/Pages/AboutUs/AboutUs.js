@@ -1,9 +1,11 @@
-import React from 'react';
+import React  from 'react';
+import './AboutUs.css'
 
 const AboutUs = () => {
+
     return (
-        <div>
-            <h1>This is About Us page</h1>
+        <div className='pt-40 px-[70px]'>
+            <h1>this is about page</h1>
         </div>
     );
 };

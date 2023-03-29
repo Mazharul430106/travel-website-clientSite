@@ -1,16 +1,39 @@
+.slick-slide>div {
+    margin: 0 5px !important;
+}
 
-.react-multi-carousel-dot-list {
-    bottom: 60px;
+.slick-list {
+    margin: 0 -5px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 28px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 100 !important;
+    color: #3282AD !important;
+}
+
+.slick-dots{
+    position: absolute;
+    bottom: -50px !important;
+}
+
+
+@media screen and (max-width:768px) {
+    .slick-slide>div {
+        margin: 0 !important;
+    }
     
-}
-.react-multi-carousel-dot button{
-    border: 2px solid #3282AD;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-}
-
-.react-multi-carousel-dot--active button {
-    background: #3282AD;
-    z-index: 2;
+    .slick-list {
+        margin: 0 !important;
+    }
+    .slick-dots li button:before {
+        font-size: 16px !important;
+    }
+    .slick-dots{
+      
+        bottom: -80px !important;
+    }
 }

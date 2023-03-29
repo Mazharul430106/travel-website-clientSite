@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="w-full max-w-[1366px] mx-auto ">
+    <div className="w-full mx-auto lg:max-w-[1366px] bg-[#F5F5F5] pb-20"> 
       <RouterProvider router={router}> </RouterProvider>
     </div>
   );

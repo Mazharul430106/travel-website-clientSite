@@ -7,10 +7,12 @@ const DisplayPackages = ({ signlePackage }) => {
     // console.log(signlePackage)
     const { img, place_title, price, ratting, desc } = signlePackage;
 
-
     return (
-        <div className="card card-compact w-full rounded bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
+        <div className="card card-compact w-full rounded shadow-lg bg-base-100 ">
+            <div className='relative'>
+                <figure><img src={img} className='lg:h-[350px] w-full rounded-t' alt="Shoes" /></figure>
+                <span className='absolute top-4 right-4 bg-white font-bold text-sm px-3 py-1 rounded-full text-[#3282AD]'>${price}</span>
+            </div>
             <div className="card-body">
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-1'>

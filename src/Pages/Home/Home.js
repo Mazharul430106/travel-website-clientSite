@@ -19,32 +19,32 @@ import Clients from '../Clients/Clients';
 
 const Home = () => {
   return (
-    <div className=''>
-      {/* start hero section */}
+    <div className='xl:px-[70px] lg:px-[70px] px-[30px]' style={{
+      background: `url(${heroRactangle})`,
+      backgroundRepeat: 'no-repeat',
 
-      <section className='hero-section px-[70px] relative pt-[197px]' style={{
-        background: `url(${heroRactangle})`,
-        backgroundRepeat: 'no-repeat',
-      }}>
+    }}>
+      {/* start hero section */}
+      <section className='hero-section relative pt-[197px]'>
 
         <div className='lg:flex items-center justify-between'>
           <div>
-            <button className='flex items-center gap-12  cursor-pointer rounded-full bg-[#D2F4FF] w-[197px] h-16'>
+            <button className='flex items-center gap-12 cursor-pointer rounded-full bg-[#D2F4FF] w-[197px] h-16'>
               <span className='text-4xl ml-7'>visit</span>
               <span><img src={Compass} className='h-9 w-9' alt="" /></span>
             </button>
             <div className='w-full lg:max-w-[468px] max-w-full h-[243px] mt-12'>
-              <h2 className='lg:text-[64px] text-[50px] leading-[140%] font-bold mt-[-20px]'>The Exotic <span className='text-[#3282AD]'>Lakshadweep</span> Islands</h2>
+              <h2 className='lg:text-[64px] text-[30px] leading-[140%] font-bold mt-[-20px]'>The Exotic <span className='text-[#3282AD]'>Lakshadweep</span> Islands</h2>
             </div>
           </div>
 
           <div className='relative max-w-[421px] h-full max-h-[425px]' >
             <img src={heroImg} className='w-full rounded-full' alt="" />
-            <div className='absolute top-5 w-full  h-full z-[-10]'>
+            <div className='absolute top-5 w-full h-full z-[-10]'>
               <img src={imageBg} className='w-full' alt="" />
             </div>
 
-            <div className=' absolute bottom-[-5px] left-[-45px] rounded w-full max-w-[150px] h-full max-h-[138px] bg-white shadow-xl'  >
+            <div className=' absolute bottom-[-5px] left-[-45px] rounded w-full max-w-[150px] h-full max-h-[138px] bg-white shadow-xl'>
               <img src={Ractangle9} alt="" />
               <div className='px-[9px]'>
                 <h4 className='text-[14px]'>Explore Labuan Bajo</h4>
@@ -76,11 +76,10 @@ const Home = () => {
             </button>
 
           </div>
-
         </div>
 
-        <div className='flex items-center lg:gap-[246px] gap-24  pt-16 pb-[136px]'>
-          <button className='border border-[#3282AD] rounded px-8 py-4 text-[#3282AD] hover:bg-[#3282AD] hover:text-white'>Discover Now</button>
+        <div className='flex items-center lg:gap-[246px] gap-20 pt-16 pb-[136px]'>
+          <button className='border border-[#3282AD] rounded xl:px-8 lg:px-8 px-5 py-4 text-[#3282AD] hover:bg-[#3282AD] hover:text-white'>Discover Now</button>
           <span><img className='rotate-[-45deg] text-[#42A7C3]' src={aroplane} alt="" /></span>
         </div>
 
@@ -91,7 +90,7 @@ const Home = () => {
           height: '874px',
           position: 'absolute',
           top: '20px',
-          right: '0px',
+          right: '-20px',
 
         }}>
 
@@ -101,54 +100,56 @@ const Home = () => {
       {/* end hero section */}
 
       {/* start flying section */}
-      <section className='flying-section px-[70px] py-10 bg-white shadow'>
-        <h2 className='text-[20px] font-semibold'>Where are you flying? </h2>
-        <form action="">
-          <div className='lg:flex items-center gap-6'>
-            <div className="form-control w-[340px]">
-              <label className="label p-0">
-                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10 " >From-To</span>
-              </label>
-              <div className='relative'>
-                <input type="text" placeholder="Type here" className="input rounded input-bordered w-full focus:outline-none" />
-                <RiArrowUpDownFill className='absolute top-[38%] cursor-pointer rotate-[90deg] right-3'></RiArrowUpDownFill>
+      <section className='flying-section w-full rounded py-10 bg-white shadow-lg'>
+        <div className='px-6'>
+          <h2 className='text-[20px] font-semibold'>Where are you flying? </h2>
+          <form action="">
+            <div className='lg:flex items-center gap-6'>
+              <div className="form-control w-full lg:max-w-[300px] xl:max-w-[360px]">
+                <label className="label p-0">
+                  <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10 " >From -To</span>
+                </label>
+                <div className='relative'>
+                  <input type="text" placeholder="Type here" className="input rounded input-bordered w-full focus:outline-none" />
+                  <RiArrowUpDownFill className='absolute top-[38%] cursor-pointer rotate-[90deg] right-3'></RiArrowUpDownFill>
+                </div>
+              </div>
+              <div className="form-control lg:max-w-[124px] xl:max-w-[200px] w-full">
+                <label className="label p-0">
+                  <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Trip</span>
+                </label>
+                <select className="select select-bordered rounded w-full text-normal focus:outline-none">
+                  <option selected>Retrun</option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+              </div>
+              <div className="form-control w-full lg:max-w-[300px] xl:max-w-[360px]">
+                <label className="label p-0">
+                  <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Depart - Return</span>
+                </label>
+                <input type="text" placeholder="Type here"
+                  className=" rounded input input-bordered w-full focus:outline-none" />
+              </div>
+              <div className="form-control w-full lg:max-w-[300px] xl:max-w-[360px]">
+                <label className="label p-0">
+                  <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Passenger - Class</span>
+                </label>
+                <input type="text" placeholder="Type here"
+                  className=" rounded input input-bordered w-full focus:outline-none" />
               </div>
             </div>
-            <div className="form-control lg:w-[140px] w-full">
-              <label className="label p-0">
-                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Trip</span>
-              </label>
-              <select className="select select-bordered w-full text-normal focus:outline-none">
-                <option selected>Retrun</option>
-                <option>Han Solo</option>
-                <option>Greedo</option>
-              </select>
-            </div>
-            <div className="form-control w-[340px]">
-              <label className="label p-0">
-                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Depart- Return</span>
-              </label>
-              <input type="text" placeholder="Type here"
-                className=" rounded input input-bordered w-full focus:outline-none" />
-            </div>
-            <div className="form-control w-[340px]">
-              <label className="label p-0">
-                <span className="label-text text-[#112211] relative bg-white px-1 ml-2 top-[9px] z-10">Passenger - Class</span>
-              </label>
-              <input type="text" placeholder="Type here"
-                className=" rounded input input-bordered w-full focus:outline-none" />
-            </div>
-          </div>
 
-          <div className='lg:flex items-center gap-2 lg:mt-12 mt-5 '>
-            <input type="text" placeholder="+ Add Promo Code" className="input w-full h-12 relative rounded focus:outline-none input-bordered border-dashed" />
-            <button type='submit' className='flex w-full lg:mt-0 mt-5 items-center justify-center rounded text-white gap-2 border lg:max-w-[144px] h-[48px] bg-[#3282AD]'>
-              <img src={AirIcon} alt="" />
-              <span className=''>Show Filghts</span>
-            </button>
-          </div>
+            <div className='lg:flex items-center gap-2 lg:mt-12 mt-5 '>
+              <input type="text" placeholder="+ Add Promo Code" className="input w-full h-12 relative rounded focus:outline-none input-bordered border-dashed" />
+              <button type='submit' className='flex w-full lg:mt-0 mt-5 items-center justify-center rounded text-white gap-2 border lg:max-w-[144px] h-[48px] bg-[#3282AD]'>
+                <img src={AirIcon} alt="" />
+                <span className=''>Show Filghts</span>
+              </button>
+            </div>
 
-        </form>
+          </form>
+        </div>
       </section>
       {/* end flying section */}
 
@@ -159,7 +160,7 @@ const Home = () => {
 
 
       {/* start frame section */}
-      <section className='frame px-[70px] pb-[88px]'>
+      <section className='frame pb-[88px]'>
 
         <div className='relative'>
           <div className='lg:flex items-center w-full justify-between border  rounded px-8 bg-[#42A7C3] '>
@@ -177,13 +178,7 @@ const Home = () => {
       </section>
       {/* start frame section */}
 
-      
       <Clients></Clients>
-
-
-
-
-
     </div>
   );
 };
