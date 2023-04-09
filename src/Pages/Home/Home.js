@@ -22,7 +22,6 @@ const Home = () => {
     <div className='xl:px-[70px] lg:px-[70px] px-[30px]' style={{
       background: `url(${heroRactangle})`,
       backgroundRepeat: 'no-repeat',
-
     }}>
       {/* start hero section */}
       <section className='hero-section relative pt-[197px]'>

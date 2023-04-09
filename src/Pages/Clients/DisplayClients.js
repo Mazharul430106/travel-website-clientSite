@@ -2,7 +2,7 @@ import React from 'react';
 import StarIcon from '../../assets/Star.png';
 
 const DisplayClients = ({ singleClient }) => {
-    console.log(singleClient)
+    // console.log(singleClient)
     const { img, name, country, desc } = singleClient;
     return (
         <div className="card card-compact w-full bg-base-100 shadow-lg rounded py-[22px]">

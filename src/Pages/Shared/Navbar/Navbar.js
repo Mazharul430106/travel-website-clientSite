@@ -36,27 +36,26 @@ const Navbar = () => {
     </React.Fragment>
 
     return (
-            <div className="navbar absolute w-full xl:max-w-[1366px] lg:max-w-[1366px] xl:px-[70px] lg:px-[60px] z-10 top-5 ">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            {menuItems}
-                        </ul>
-                    </div>
-                    <Link to='/' className="normal-case">
-                        <img className='w-[99.35px] h-[56px]' src={Logo} alt="" />
-                    </Link>
-                </div>
-                <div className="navbar-center ml-auto hidden lg:flex">
-                    <ul className="menu menu-horizontal ">
+        <div className="navbar absolute w-full xl:max-w-[1366px] lg:max-w-[1366px] xl:px-[70px] lg:px-[60px] z-10 top-5 ">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {menuItems}
                     </ul>
                 </div>
+                <Link to='/' className="normal-case">
+                    <img className='w-[99.35px] h-[56px]' src={Logo} alt=""/>
+                </Link>
             </div>
-
+            <div className="navbar-center ml-auto hidden lg:flex">
+                <ul className="menu menu-horizontal ">
+                    {menuItems}
+                </ul>
+            </div>
+        </div>
     );
 };
 

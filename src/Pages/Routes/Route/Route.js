@@ -4,6 +4,7 @@ import AboutUs from "../../AboutUs/AboutUs";
 import Home from "../../Home/Home";
 import Login from "../../Login/Login";
 import SignUp from "../../SignUp/SignUp";
+import DisplayAboutUs from "../../AboutUs/DisplayAboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +17,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/aboutUs',
-                element: <AboutUs></AboutUs>
+                element: <AboutUs></AboutUs>,
+                loader: ()=> fetch('http://localhost:5000/ourTeams'),
+                children: [
+                    {
+                        path: '/aboutUs/:id',
+                        element: <AboutUs></AboutUs>
+                    }
+                ]
             },
             {
                 path: '/login',
