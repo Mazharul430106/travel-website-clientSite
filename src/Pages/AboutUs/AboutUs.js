@@ -6,6 +6,7 @@ import CircleImg from '../../assets/Circle big.png';
 import { useLoaderData } from 'react-router-dom';
 import DisplayAboutUs from './DisplayAboutUs';
 import NastedNavItem from '../NastedNavItem/NastedNavItem';
+import ImageGallery from '../../Components/ImageGallery/ImageGallery';
 
 
 
@@ -14,7 +15,7 @@ const AboutUs = () => {
     const ourTeams = useLoaderData();
 
     const [teams, setTeams] = useState([ourTeams[4]]);
-    console.log(teams)
+    // console.log(teams)
 
     const handleTeam = (singleTeam) => {
         const newTeams = [teams, singleTeam];
@@ -39,7 +40,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className=' w-full mx-auto xl:max-w-[1226px] lg:max-w-[1226px] py-12 bg-[#F6FDFF] '>
+            <div className=' w-full mx-auto xl:max-w-[1226px] lg:max-w-[1226px] py-12 bg-[#F6FDFF] mb-[64px]'>
                 <div className='w-full xl:max-w-[377px] mx-auto text-center'>
                     <h2 className='font-bold text-[32px]'>Our Team</h2>
                     <p className='font-normal text-base'>Quidam officiis similique sea ei, vel tollit indoctum
@@ -47,8 +48,8 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className='xl:flex lg:flex gap-20 mt-5'>
-                <div className='nestedDiv xl:flex-none lg:flex-none'>
+            <div className='xl:flex lg:flex gap-20'>
+                <div className='nestedDiv xl:flex-none lg:flex-none mt-[15px]'>
 
                     {
                         ourTeams.map(singleTeam => <NastedNavItem key={singleTeam._id} singleTeam={singleTeam} handleTeam={handleTeam} ></NastedNavItem>)
@@ -63,9 +64,22 @@ const AboutUs = () => {
             </div>
 
 
-            <div>
-                hello gallery
+            <div className='mt-[88px] py-[64px] bg-[#F6FDFF]'>
+                
+                <div className='xl:w-[578px] xl:ml-[115px] lg:ml-[115px]'>
+                    <h2 className='text-[32px] font-bold'>What customer’s are saying?</h2>
+                    <p className=''>Take a look at what our customer’s are saying. At Nature we not only provide you with services but also we provide you with valuable experiences for your valuable time.</p>
+                </div>
+
+
+                <ImageGallery></ImageGallery>
             </div>
+
+
+            <div>
+                
+            </div>
+
 
 
 
